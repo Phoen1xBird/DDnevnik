@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ddnevnik"
+version = "0.1.0"
+description = "DigitalDnevnik"
+requires-python = ">=3.10"
+dependencies = [
+    "pydantic>=2,<3",
+    "SQLAlchemy>=2,<3",
+    "platformdirs>=4,<5",
+    "typer>=0.12,<1",
+]
+
+[project.scripts]
+ddnevnik = "ddnevnik.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]
